@@ -25,13 +25,12 @@
 				    withMaven(jdk: 'localjdk', maven: 'localmaven')
 					{
 					
-					sh 'mvnvalidate'
+					sh 'mvn validate'
 					
-                      				
-				}
-			}
+                      				}
+			     }
 			
-         	}     
-     }
+                     	}     
+       }
 
 }
