@@ -8,14 +8,27 @@
 			{
 			  steps {
 			  
-			          branch : 'master',url: "https://github.com/kushgu06/maven-project.git"
+			        git branch : 'master, 'git: "https://github.com/kushgu06/maven-project.git"
 			  
 			  }
 			
 			
 			
 			}
+			stage ('validate code')
 			
+            {
+
+               steps 
+			    {
+				
+				    withMaven(jdk: 'localjdk', maven: 'localmaven')
+					{
+					
+					sh 'mvnvalidate'
+					
+                      				
+				}
+			}
+		}	
 	}	     
-  
-  }
