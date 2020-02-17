@@ -30,7 +30,7 @@ pipeline
               withAnt(installation: 'localant', jdk: 'localjdk')
 					{
 					
-					sh 'mvn validate'
+					sh 'build validate'
 					
                       				}
 					   
@@ -51,7 +51,7 @@ pipeline
             withAnt(installation: 'localant', jdk: 'localjdk')
 					{
 					
-					sh 'mvn test'
+					sh 'build test'
 					
                       				}
 					   
