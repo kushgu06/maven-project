@@ -1,1 +1,78 @@
+pipeline 
+        {
+		
+	       agent any
+              stages
+				{
+				
+				   stage('scm checkout')
+				 
+				    {
+					  steps{
+					  
+				                git branch: 'master', url: 'https://github.com/kushgu06/maven-project.git'	 
+					  
+				           }
+					  
+					  
+					 
+					  }
+					 
+					 
+				
+                stage('validate code')
+
+					{
+					
+					   steps{
+					   
+					   
+              withAnt(installation: 'localant', jdk: 'localjdk')
+					{
+					
+					sh 'mvn validate'
+					
+                      				}
+					   
+					   
+					   }
+					
+					
+					}
+				
+				
+				stage ('test')
+				
+				 {
+				 
+				   steps
+				     {
+					     
+            withAnt(installation: 'localant', jdk: 'localjdk')
+					{
+					
+					sh 'mvn test'
+					
+                      				}
+					   
+					 
+					 
+					 }
+				   
+				   
+				 
+				 
+				 }
+				
+	
+				
+				
+				
+				}
+		
+		
+		
+		
+			}
+		
 
