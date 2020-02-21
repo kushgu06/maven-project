@@ -11,7 +11,7 @@ pipeline
 			   
 			   {
 			   
-			       git branch: 'master', url: 'https://github.com/kushgu06/Ant-WebProject.git
+			       git branch: 'master', url: 'https://github.com/kushgu06/maven-project.git'
 			   
 			   }
 			 
