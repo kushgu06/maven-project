@@ -1,0 +1,58 @@
+pipeline
+  {
+  
+    agent any
+	  stages
+	  
+	    {
+		    stage
+			 {
+			   step ('scm checkout')
+			   
+			   {
+			   
+			       git branch: 'master', url: 'https://github.com/kushgu06/Ant-WebProject.git
+			   
+			   }
+			 
+			 
+			 
+			 }
+		
+		
+	         stage
+				{
+				  step  
+				    {
+					
+					withSonarQubeEnv('sonar') {
+                    withMaven(maven : 'LocalMaven') {
+                    sh 'mvn clean package sonar:sonar'
+					
+					
+					}
+				
+				}
+				
+				}
+				
+				
+				}
+		     
+		
+		
+		
+		
+		
+		
+		}
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
