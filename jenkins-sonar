@@ -7,7 +7,7 @@ pipeline
 	    {
 		    stage
 			 {
-			   step ('scm checkout')
+			   steps ('scm checkout')
 			   
 			   {
 			   
@@ -22,7 +22,7 @@ pipeline
 		
 	         stage
 				{
-				  step  
+				  steps 
 				    {
 					
 					withSonarQubeEnv('sonar') {
