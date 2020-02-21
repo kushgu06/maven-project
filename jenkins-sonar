@@ -5,9 +5,9 @@ pipeline
 	  stages
 	  
 	    {
-		    stage
+		    stage ('scm checkout')
 			 {
-			   steps ('scm checkout')
+			   steps
 			   
 			   {
 			   
@@ -20,13 +20,13 @@ pipeline
 			 }
 		
 		
-	         stage
+	         stage ('sonar')
 				{
 				  steps 
 				    {
 					
 					withSonarQubeEnv('sonar') {
-                    withMaven(maven : 'LocalMaven') {
+                    withMaven(maven : 'localmaven') {
                     sh 'mvn clean package sonar:sonar'
 					
 					
