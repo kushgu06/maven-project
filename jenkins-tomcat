@@ -25,12 +25,9 @@ pipeline
 				  steps 
 				    {
 					
-					withSonarQubeEnv( 'mysonar') {
-                                                 withMaven(jdk: 'localjdk', maven: 'localmaven') {
-                                                                   sh 'mvn clean install sonar:sonar'
-					
-					
-					}
+					sshagent(['cicd']) {
+                                                sh 'scp -o StrictHostKeyChecking=no  */target/*.war     ec2-user@3.121.29.197;/usr/share/tomcat/webapp/'	
+                                                             
 				
 				}
 				
