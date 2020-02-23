@@ -79,7 +79,7 @@ pipeline{
 			 
 			 }
 			 
-FailFast:'true'
+FailFast:true
 
 }
 
