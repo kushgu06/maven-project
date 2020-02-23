@@ -1,6 +1,6 @@
 pipeline{
 			agent any
-			 stages
+			 stages{
 			 
 			  stage ('scm checkout')
 			 {
@@ -65,7 +65,7 @@ pipeline{
 			 
 			 
 			 
-			 
+			 }
 			 
 			 
 			 
