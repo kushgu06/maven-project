@@ -18,6 +18,25 @@ pipeline
 			 
 			 
 			 }
+			 
+			 stage ('sonar')
+				{
+				  steps 
+				    {
+					
+					
+                    withMaven(jdk: 'localjdk',maven : 'localmaven') {
+                    sh 'mvn clean package '
+					
+					
+					}
+				
+				}
+				
+				}
+				
+				
+				
 		
 		
 	         stage ('deploy to tomcat')
