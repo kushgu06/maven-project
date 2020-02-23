@@ -17,7 +17,7 @@ pipeline{
 			 }
 			 
 			 
-				stage('parallel deployment')
+				stage('parallel deployment'){
 				parallel{
 				
 					stage('deploy to windows')
@@ -81,7 +81,7 @@ pipeline{
 			 
 
 
-
+}
 
 
 
