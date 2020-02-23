@@ -25,7 +25,7 @@ pipeline{
 					   steps{
 					   
 					   	withMaven(maven : 'localmaven'){
-					          sh 'mvn compile'
+					          sh 'mvn compil'
 					   }
 					   
 					   }
@@ -39,7 +39,7 @@ pipeline{
 						  steps{
 						  
 						  withMaven(maven : 'localmaven'){
-					          sh 'mvn compi'
+					          sh 'mvn compile'
 						       }
 						  
 						  
