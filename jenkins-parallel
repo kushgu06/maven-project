@@ -1,0 +1,74 @@
+pipeline{
+			agent any
+			 stages
+			 {
+				stage('parallel deployment')
+				parallel{
+				
+					stage('deploy to windows')
+					{
+					   steps{
+					   
+					          sh 'echo hi'
+					   
+					   
+					   }
+					
+					
+					
+					
+					}
+						stage('deploy to linux')
+						{
+						  steps{
+						  
+						  
+						       sh 'echo bye'
+						  
+						  
+							}
+						
+						
+						}
+			
+					
+					
+					
+					
+					
+					
+					}
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 }
+			 
+
+
+
+
+}
+
+
+
+
+
