@@ -45,12 +45,12 @@ pipeline{
 						  
 							}
 						
-						FailFast:true 
+						 
 						}
 			
 					
 					
-					
+					failFast true 
 					
 					
 					
