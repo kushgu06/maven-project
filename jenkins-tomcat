@@ -45,7 +45,7 @@ pipeline
 				    {
 					
 					sshagent(['cicd']) {
-                                                sh 'scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/jenkins-tomcat/webapp/target/webapp.war   ec2-user@3.120.130.12:/var/lib/tomcat/webapps'	
+                                                sh 'scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/jenkins-tomcat/webapp/target/webapp.war   ec2-user@3.120.130.12:/usr/share/tomcat/webapp/'	
                                                                                  
 				
 				}
