@@ -20,13 +20,13 @@ pipeline
 			 }
 		
 		
-	         stage ('sonar')
+	         stage ('deploy to tomcat')
 				{
 				  steps 
 				    {
 					
 					sshagent(['cicd']) {
-                                                sh 'scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/*/webapp   ec2-user@3.122.60.58;/usr/share/tomcat/webapp/'	
+                                                sh 'scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/*/webapp   ec2-user@3.120.130.12:/var/lib/tomcat/webapps'	
                                                                                  
 				
 				}
