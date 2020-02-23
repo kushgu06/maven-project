@@ -1,6 +1,21 @@
 pipeline{
 			agent any
 			 stages
+			 
+			  stage ('scm checkout')
+			 {
+			   steps
+			   
+			   {
+			   
+			       git branch: 'master', url: 'https://github.com/kushgu06/maven-project.git'
+			   
+			   }
+			 
+			 
+			 
+			 }
+			 
 			 {
 				stage('parallel deployment')
 				parallel{
@@ -9,8 +24,9 @@ pipeline{
 					{
 					   steps{
 					   
-					          sh 'echo hi'
-					   
+					   	withMaven(maven : 'localmaven'){
+					          sh 'mvn compile'
+					   }
 					   
 					   }
 					
@@ -22,8 +38,9 @@ pipeline{
 						{
 						  steps{
 						  
-						  
-						       sh 'echo bye'
+						  withMaven(maven : 'localmaven'){
+					          sh 'mvn compile'
+						       }
 						  
 						  
 							}
