@@ -59,6 +59,18 @@ pipeline{
 			 
 			 
 			 
+			FailFast:true 
+			 
+			 
+			 
+			 
+			 
+			 }
+			 
+			 
+			 
+			 
+			 
 			 
 			 
 			 
@@ -67,19 +79,7 @@ pipeline{
 			 
 			 }
 			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 }
-			 
-FailFast true
+
 
 }
 
