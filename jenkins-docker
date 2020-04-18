@@ -15,7 +15,7 @@ git branch: 'master' , url: 'https://github.com/kushgu06/maven-project.git'
 stage ("package")
 {
     steps {
-        withMaven(jdk: 'localjdk-8', maven: 'localmaven') {
+        withMaven(maven: 'localmaven') {
     sh 'mvn package'
 }
     }
