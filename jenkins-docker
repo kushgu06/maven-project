@@ -8,7 +8,7 @@ agent any
 stage ("scm checkout")
 {
     steps {
-git branch: 'master' , url: 'https://github.com/prakashk0301/maven-project'
+git branch: 'master' , url: 'https://github.com/kushgu06/maven-project.git'
 }
 }
 
@@ -24,7 +24,7 @@ stage ("docker image build")
 {
 
 steps {
-sh 'docker build -t pkw0301/mytomcat:0.0.1 .'
+sh 'docker build -t kushal07/mytomcat:0.0.1 .'
 
 }
 }
