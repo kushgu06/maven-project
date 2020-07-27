@@ -26,7 +26,7 @@
 				    withMaven(jdk: 'localjdk', maven: 'localmaven')
 					{
 					
-					sh 'mvn validate'
+					sh 'mvn install'
 					
                       				}
 			     }
